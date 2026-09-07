@@ -5,184 +5,281 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BeautyConnect</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap
+
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:#f8f8f8;
+background:#fff;
+color:#222;
 }
 
-header{
-    background:linear-gradient(135deg,#ff4f9a,#ff8dc7);
-    color:white;
-    text-align:center;
-    padding:80px 20px;
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+border-bottom:1px solid #eee;
 }
 
-header h1{
-    font-size:3rem;
+.logo{
+font-size:28px;
+font-weight:700;
+color:#ff4f8b;
 }
 
-header p{
-    margin-top:15px;
-    font-size:1.2rem;
+.menu a{
+text-decoration:none;
+margin-left:20px;
+color:#333;
 }
 
-.search-box{
-    margin-top:30px;
+.hero{
+height:85vh;
+background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1800') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding:20px;
 }
 
-.search-box input{
-    padding:15px;
-    width:300px;
-    border:none;
-    border-radius:8px;
+.hero-content h1{
+font-size:60px;
+margin-bottom:15px;
 }
 
-.search-box button{
-    padding:15px 25px;
-    border:none;
-    border-radius:8px;
-    background:black;
-    color:white;
-    cursor:pointer;
+.hero-content p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.search{
+background:white;
+padding:10px;
+border-radius:60px;
+display:flex;
+max-width:600px;
+margin:auto;
+}
+
+.search input{
+flex:1;
+border:none;
+outline:none;
+padding:15px;
+font-size:16px;
+}
+
+.search button{
+background:#ff4f8b;
+border:none;
+color:white;
+padding:15px 30px;
+border-radius:40px;
+cursor:pointer;
 }
 
 .section{
-    padding:60px 20px;
-    max-width:1200px;
-    margin:auto;
+padding:80px 8%;
 }
 
-.title{
-    text-align:center;
-    margin-bottom:40px;
-    color:#333;
+.section h2{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
 }
 
 .cards{
-    display:flex;
-    gap:25px;
-    flex-wrap:wrap;
-    justify-content:center;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
 }
 
 .card{
-    background:white;
-    width:320px;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 4px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+background:white;
+transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
+transform:translateY(-8px);
 }
 
 .card img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
+width:100%;
+height:250px;
+object-fit:cover;
 }
 
 .card-content{
-    padding:20px;
+padding:20px;
 }
 
-.card h3{
-    color:#333;
+.card-content h3{
+margin-bottom:10px;
 }
 
-.city{
-    color:#888;
-    margin:10px 0;
-}
-
-.price{
-    color:#ff4f9a;
-    font-weight:bold;
+.card-content p{
+color:#666;
+margin-bottom:15px;
 }
 
 .btn{
-    display:block;
-    margin-top:15px;
-    text-align:center;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    padding:12px;
-    border-radius:8px;
+display:inline-block;
+background:#ff4f8b;
+color:white;
+padding:12px 20px;
+border-radius:10px;
+text-decoration:none;
 }
 
-.benefits{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+.stats{
+background:#fafafa;
+padding:80px 8%;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+text-align:center;
 }
 
-.benefit{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    text-align:center;
+.stats h3{
+font-size:40px;
+color:#ff4f8b;
 }
 
 footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:30px;
-    margin-top:40px;
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
 }
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:38px;
+}
+
+.stats{
+grid-template-columns:1fr;
+gap:30px;
+}
+
+.search{
+flex-direction:column;
+border-radius:20px;
+}
+
+.search button{
+width:100%;
+margin-top:10px;
+}
+
+}
+
 </style>
 
 </head>
+
 <body>
 
-<header>
-    <h1>💄 BeautyConnect</h1>
-    <p>Encontre profissionais da beleza perto de você</p>
+<nav>
+<div class="logo">BeautyConnect</div>
 
-    <div class="search-box">
-        <input type="text" placeholder="Digite sua cidade">
-        <button>Buscar</button>
-    </div>
-</header>
+<div class="menu">
+#Início</a>
+#Profissionais</a>
+#Cadastrar-se</a>
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Encontre profissionais da beleza</h1>
+
+<p>Maquiagem, unhas, cabelo, cílios e sobrancelhas em um só lugar.</p>
+
+<div class="search">
+<input type="text" placeholder="Digite sua cidade">
+<button>Buscar</button>
+</div>
+
+</div>
+
+</section>
 
 <section class="section">
-    <h2 class="title">Profissionais em Destaque</h2>
 
-    <div class="cards">
+<h2>Profissionais em Destaque</h2>
 
-        <div class="card">
-            https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800
-            <div class="card-content">
-                <h3>Ana Souza</h3>
-                <p class="city">📍 Bela Vista - MS</p>
-                <p>Maquiagem Social e Formaturas</p>
-                <p class="price">A partir de R$80</p>
-                #WhatsApp</a>
-            </div>
-        </div>
+<div class="cards">
 
-        <div class="card">
-            https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800
-            <div class="card-content">
-                <h3>Maria Oliveira</h3>
-                <p class="city">📍 Campo Grande - MS</p>
-                <p>Especialista em Noivas</p>
-                <p class="price">A partir de R$150</p>
-                #WhatsApp</a>
-            </div>
-        </div>
+<div class="card">
+<img src="https://images.unsplash.com/790108377-be9c29b29330?q=80&w=1000
+<div class="card-content">
+<h3>Ana Souza</h3>
+<p>Bela Vista - MS</p>
+<a hrefrfil</a>
+</div>
+</div>
 
-        <div class="card">
-            https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800
-            <div class="card-content">
-                <h3>Juliana Lima<
+<div class="card">
+<img src="https://images.unsplash.com/photo-1438761681033-646q=80&w=1000
+<div class="card-content">
+<h3>Juliana Lima</h3>
+<p>Campo Grande - MS</p>
+<a hrefrfil</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1488426862026-3ee34a7&w=1000
+<div class="card-content">
+<h3>Maria Oliveira</h3>
+<p>Dourados - MS</p>
+<a hrefrfil</a>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div>
+<h3>500+</h3>
+<p>Profissionais</p>
+</div>
+
+<div>
+<h3>2.000+</h3>
+<p>Clientes</p>
+</div>
+
+<div>
+<h3>98%</h3>
+<p>Satisfação</p>
+</div>
+
+</section>
+
+<footer>
+© 2026 BeautyConnect
+</footer>
+
+</body>
+</html>
