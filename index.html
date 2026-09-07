@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BeautyConnect — Encontre profissionais de beleza perto de você</title>
+<meta name="description" content="Encontre e agende maquiadores, manicures, designers de sobrancelha, lash designers e cabeleireiros perto de você. Cadastre-se grátis como profissional." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="topbar">✨ Novo em Campo Grande e Dourados — <strong>cadastre-se como profissional e ganhe destaque grátis nos primeiros 30 dias</strong></div>
+
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="logo">Beauty<span>Connect</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html#categorias">Categorias</a></li>
+        <li><a href="index.html#como-funciona">Como funciona</a></li>
+        <li><a href="cadastro.html">Para profissionais</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a href="cadastro.html" class="btn btn-outline">Entrar</a>
+      <a href="cadastro.html" class="btn btn-primary">Cadastre-se grátis</a>
+    </div>
+    <button class="nav-toggle" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-blob" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-copy">
+      <span class="hero-eyebrow">Beleza sob demanda, perto de você</span>
+      <h1>O profissional de beleza certo está mais perto do que você imagina</h1>
+      <p class="hero-sub">Maquiagem, unhas, sobrancelhas, cílios e cabelo — compare avaliações reais, veja o portfólio e feche o horário direto pelo WhatsApp.</p>
+      <div class="hero-stats">
+        <div><strong>1.200+</strong><span>profissionais ativos</span></div>
+        <div><strong>4.8</strong><span>nota média</span></div>
+        <div><strong>18</strong><span>cidades atendidas</span></div>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=1200&auto=format&fit=crop" alt="Maquiadora profissional finalizando a make de uma cliente" />
+      <div class="hero-badge">
+        <div>
+          <div class="stars">★★★★★</div>
+          <strong>Camila Duarte</strong>
+          <span>Maquiadora · Campo Grande</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container search-wrap">
+  <form class="search-card" id="search-form">
+    <div class="search-field">
+      <label for="input-cidade">Cidade</label>
+      <input type="text" id="input-cidade" name="cidade" placeholder="Ex: Campo Grande, MS" autocomplete="off" />
+    </div>
+    <div class="search-divider" aria-hidden="true"></div>
+    <div class="search-field">
+      <label for="input-categoria">Categoria</label>
+      <select id="input-categoria" name="categoria">
+        <option value="">Todas as categorias</option>
+        <option value="maquiagem">Maquiagem</option>
+        <option value="manicure">Manicure</option>
+        <option value="sobrancelhas">Sobrancelhas</option>
+        <option value="cilios">Cílios</option>
+        <option value="cabelo">Cabeleireiros</option>
+      </select>
+    </div>
+    <button type="submit" class="search-submit">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      Buscar
+    </button>
+  </form>
+</div>
+
+<section class="categories container" id="categorias">
+  <div class="section-head">
+    <div>
+      <h2>Explore por categoria</h2>
+      <p>Cada serviço tem seus próprios especialistas, avaliados por quem já foi atendido.</p>
+    </div>
+  </div>
+  <div class="cat-row" id="cat-row">
+    <button class="cat-card" data-cat="maquiagem">
+      <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3v4M9 3c-2 0-3 1.3-3 3s1 3 3 3M9 9v12M15 12l5-5-2-2-5 5-2 5z"/></svg></span>
+      <strong>Maquiagem</strong>
+      <span>Social, festa e noiva</span>
+    </button>
+    <button class="cat-card" data-cat="manicure">
+      <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 21c-2 0-3-1-3-3V9c0-3 2-6 5-6M7 21h10c2 0 3-1 3-3V9M7 21V9m3 5.5c1 1 3 1 4 0"/></svg></span>
+      <strong>Manicure</strong>
+      <span>Gel, nail art e pedicure</span>
+    </button>
+    <button class="cat-card" data-cat="sobrancelhas">
+      <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10c2-4 6-5 9-3M12 10c3-3 7-2 9 1M4 15c1.5 2 4 2.5 6 1M14 15c2 1.5 4.5 1 6-1"/></svg></span>
+      <strong>Sobrancelhas</strong>
+      <span>Design, henna e micro</span>
+    </button>
+    <button class="cat-card" data-cat="cilios">
+      <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 13c4-6 16-6 20 0M5 14l-1 3M9 15.5l-.5 3M14.5 15.5l.5 3M19 14l1 3"/></svg></span>
+      <strong>Cílios</strong>
+      <span>Volume russo e fio a fio</span>
+    </button>
+    <button class="cat-card" data-cat="cabelo">
+      <span class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 20c0-6-2-8-2-12a5 5 0 0 1 10 0c0 3-2 4-2 8M12 8a5 5 0 0 1 10 0c0 4-2 6-2 12"/></svg></span>
+      <strong>Cabeleireiros</strong>
+      <span>Corte, cor e tratamento</span>
+    </button>
+  </div>
+</section>
+
+<section class="container" id="resultados">
+  <div class="results-bar">
+    <p class="results-count"><strong id="results-count">--</strong> profissionais encontrados</p>
+    <div class="pill-filters" id="pill-filters">
+      <button data-cat="" class="is-active">Todas</button>
+      <button data-cat="maquiagem">Maquiagem</button>
+      <button data-cat="manicure">Manicure</button>
+      <button data-cat="sobrancelhas">Sobrancelhas</button>
+      <button data-cat="cilios">Cílios</button>
+      <button data-cat="cabelo">Cabelo</button>
+    </div>
+  </div>
+  <div class="grid-pros" id="grid-pros"></div>
+</section>
+
+<section class="how" id="como-funciona">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2>Como funciona</h2>
+        <p>Simples para quem procura um serviço e para quem quer oferecer.</p>
+      </div>
+    </div>
+    <div class="tabs" role="tablist">
+      <button class="is-active" data-tab="cliente">Sou cliente</button>
+      <button data-tab="profissional">Sou profissional</button>
+    </div>
+
+    <div class="tab-panel is-active" data-panel="cliente">
+      <div class="steps">
+        <div class="step-card">
+          <span class="step-num">1</span>
+          <h3>Busque pela sua cidade</h3>
+          <p>Escolha a categoria do serviço que precisa e veja quem atende na sua região.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">2</span>
+          <h3>Compare perfis</h3>
+          <p>Veja portfólio, preços e avaliações reais de outras clientes antes de decidir.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">3</span>
+          <h3>Combine pelo WhatsApp</h3>
+          <p>Fale direto com o profissional, sem intermediários, e agende no seu horário.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="profissional">
+      <div class="steps">
+        <div class="step-card">
+          <span class="step-num">1</span>
+          <h3>Crie seu perfil grátis</h3>
+          <p>Adicione fotos do seu trabalho, seus serviços e a região em que atende.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">2</span>
+          <h3>Apareça nas buscas</h3>
+          <p>Clientes da sua cidade encontram seu perfil pela categoria certa.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">3</span>
+          <h3>Receba contatos diretos</h3>
+          <p>Sem comissão sobre seus atendimentos: o contrato é sempre entre você e a cliente.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-pro container">
+  <div class="cta-pro-inner">
+    <div>
+      <h2>Está começando na área da beleza?</h2>
+      <p>Milhares de clientes procuram profissionais como você todos os dias. Crie seu perfil em menos de 5 minutos e comece a receber contatos.</p>
+      <div class="cta-pro-actions">
+        <a href="cadastro.html" class="btn btn-pink">Cadastrar meu perfil</a>
+        <a href="index.html#como-funciona" class="btn btn-ghost" style="color:#fff;">Saiba mais</a>
+      </div>
+    </div>
+    <div class="cta-visual">
+      <div class="cta-stat"><strong>Grátis</strong><span>para criar seu perfil</span></div>
+      <div class="cta-stat"><strong>0%</strong><span>de comissão sobre serviços</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer container">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Beauty<span>Connect</span></a>
+      <p>A forma mais simples de encontrar — ou se tornar — o profissional de beleza mais procurado da sua região.</p>
+    </div>
+    <div>
+      <h4>Plataforma</h4>
+      <ul>
+        <li><a href="index.html#categorias">Categorias</a></li>
+        <li><a href="index.html#como-funciona">Como funciona</a></li>
+        <li><a href="cadastro.html">Cadastrar perfil</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Categorias</h4>
+      <ul>
+        <li><a href="index.html#resultados">Maquiagem</a></li>
+        <li><a href="index.html#resultados">Manicure</a></li>
+        <li><a href="index.html#resultados">Sobrancelhas</a></li>
+        <li><a href="index.html#resultados">Cílios</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Termos de uso</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 BeautyConnect. Todos os direitos reservados.</span>
+    <span>Feito para conectar beleza e talento.</span>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
