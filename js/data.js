@@ -19,15 +19,15 @@ const CATEGORIAS = [
 const PROFISSIONAIS_EXEMPLO = [
   {
     id: "p1",
-    nome: "Camila Duarte",
+    nome: "Clara Inara",
     categoria: "maquiagem",
-    cidade: "Campo Grande, MS",
+    cidade: "Bela Vista, MS",
     foto: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?q=80&w=800&auto=format&fit=crop",
     capa: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=1600&auto=format&fit=crop",
     nota: 4.9,
     avaliacoes: 132,
     whatsapp: "5567999990001",
-    bio: "Maquiadora profissional há 8 anos, especialista em noivas e eventos. Atendo em domicílio ou no meu estúdio na região central.",
+    bio: "Maquiadora profissional iniciante, especialista em jovens. Atendo em domicílio ou no meu estúdio na região central.",
     servicos: [
       { nome: "Maquiagem social", preco: 130 },
       { nome: "Maquiagem para noiva", preco: 420 },
@@ -39,7 +39,7 @@ const PROFISSIONAIS_EXEMPLO = [
       "https://images.unsplash.com/photo-1503104834685-7205e8607eb9?q=80&w=800&auto=format&fit=crop",
     ],
     depoimentos: [
-      { autor: "Juliana R.", texto: "A Camila fez minha make de casamento e ficou impecável o dia todo.", nota: 5 },
+      { autor: "Juliana R.", texto: "A Clara fez minha make de casamento e ficou impecável o dia todo.", nota: 5 },
       { autor: "Fernanda A.", texto: "Super pontual e capricho em cada detalhe.", nota: 5 },
     ],
   },
