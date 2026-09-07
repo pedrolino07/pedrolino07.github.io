@@ -3,106 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>BeautyConnect</title>
 
 <style>
 *{
     margin:0;
     padding:0;
-   *box-sizing:border-box;
-    font-fa*ily:Arial, sans-serif;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
 body{
-  * background:#f8f8f8;
+    background:#f8f8f8;
 }
 
 header{
-  * background:linear-gradient(135deg*#ff4fa0,#ff7ac3);
-    color:white;*    text-align:center;
-    padding*60px 20px;
+    background:linear-gradient(135deg,#ff4f9a,#ff8dc7);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
 }
 
 header h1{
-    font-*ize:3rem;
+    font-size:3rem;
 }
 
 header p{
-    margin-*op:10px;
+    margin-top:15px;
+    font-size:1.2rem;
 }
 
-.busca{
-    text-align*center;
-    padding:30px;
+.search-box{
+    margin-top:30px;
 }
 
-.busc* input{
+.search-box input{
+    padding:15px;
     width:300px;
-    max-w*dth:90%;
-    padding:12px;
-    bor*er:1px solid #ddd;
-    border-radi*s:8px;
-}
-
-.busca button{
-    paddi*g:12px 20px;
-    background:#ff4fa*;
-    color:white;
-    border:none*
+    border:none;
     border-radius:8px;
-    cursor*pointer;
 }
 
-.profissionais{
-    di*play:flex;
+.search-box button{
+    padding:15px 25px;
+    border:none;
+    border-radius:8px;
+    background:black;
+    color:white;
+    cursor:pointer;
+}
+
+.section{
+    padding:60px 20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+    color:#333;
+}
+
+.cards{
+    display:flex;
+    gap:25px;
     flex-wrap:wrap;
-   *justify-content:center;
-    gap:20*x;
-    padding:40px;
+    justify-content:center;
 }
 
 .card{
-   *background:white;
-    width:300px;*    border-radius:15px;
-    overfl*w:hidden;
-    box-shadow:0 4px 15p* rgba(0,0,0,0.1);
+    background:white;
+    width:320px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
 }
 
 .card img{
-  * width:100%;
+    width:100%;
     height:250px;
-   *object-fit:cover;
+    object-fit:cover;
 }
 
-.card-content*
+.card-content{
     padding:20px;
 }
 
 .card h3{
-  * color:#333;
+    color:#333;
 }
 
-.card p{
-    margi*-top:8px;
-    color:#666;
+.city{
+    color:#888;
+    margin:10px 0;
 }
 
-.what*app{
+.price{
+    color:#ff4f9a;
+    font-weight:bold;
+}
+
+.btn{
     display:block;
-    text-align:center;
     margin-top:15px;
+    text-align:center;
     background:#25D366;
     color:white;
     text-decoration:none;
-    padding:10px;
+    padding:12px;
     border-radius:8px;
 }
 
-footer{
+.benefits{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.benefit{
+    background:white;
+    padding:25px;
+    border-radius:10px;
     text-align:center;
-    background:#eee;
-    padding:20px;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:40px;
 }
 </style>
 
@@ -111,51 +147,42 @@ footer{
 
 <header>
     <h1>💄 BeautyConnect</h1>
-    <p>Encontre profissionais de beleza perto de você</p>
+    <p>Encontre profissionais da beleza perto de você</p>
+
+    <div class="search-box">
+        <input type="text" placeholder="Digite sua cidade">
+        <button>Buscar</button>
+    </div>
 </header>
 
-<section class="busca">
-    <input type="text" placeholder="Digite sua cidade">
-    <button>Buscar</button>
-</section>
+<section class="section">
+    <h2 class="title">Profissionais em Destaque</h2>
 
-<section class="profissionais">
+    <div class="cards">
 
-<div class="card">
-    https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800
-    <div class="card-content">
-        <h3>Ana Souza</h3>
-        <p>Maquiadora Profissional</p>
-        <p>📍 Bela Vista - MS</p>
-        #Entrar em contato</a>
-    </div>
-</div>
+        <div class="card">
+            https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=800
+            <div class="card-content">
+                <h3>Ana Souza</h3>
+                <p class="city">📍 Bela Vista - MS</p>
+                <p>Maquiagem Social e Formaturas</p>
+                <p class="price">A partir de R$80</p>
+                #WhatsApp</a>
+            </div>
+        </div>
 
-<div class="card">
-    https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800
-    <div class="card-content">
-        <h3>Juliana Lima</h3>
-        <p>Especialista em Noivas</p>
-        <p>📍 Campo Grande - MS</p>
-        #Entrar em contato</a>
-    </div>
-</div>
+        <div class="card">
+            https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800
+            <div class="card-content">
+                <h3>Maria Oliveira</h3>
+                <p class="city">📍 Campo Grande - MS</p>
+                <p>Especialista em Noivas</p>
+                <p class="price">A partir de R$150</p>
+                #WhatsApp</a>
+            </div>
+        </div>
 
-<div class="card">
-    https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800
-    <div class="card-content">
-        <h3>Maria Oliveira</h3>
-        <p>Maquiagem para Eventos</p>
-        <p>📍 Dourados - MS</p>
-        #Entrar em contato</a>
-    </div>
-</div>
-
-</section>
-
-<footer>
-    © BeautyConnect
-</footer>
-
-</body>
-</html>
+        <div class="card">
+            https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800
+            <div class="card-content">
+                <h3>Juliana Lima<
