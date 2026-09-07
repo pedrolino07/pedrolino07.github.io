@@ -19,7 +19,7 @@ const CATEGORIAS = [
 const PROFISSIONAIS_EXEMPLO = [
   {
     id: "p1",
-    nome: "Clara Inara",
+    nome: "Clara Inara Cabral Arguelho",
     categoria: "maquiagem",
     cidade: "Bela Vista, MS",
     foto: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?q=80&w=800&auto=format&fit=crop",
